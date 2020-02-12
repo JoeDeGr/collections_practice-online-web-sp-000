@@ -6,9 +6,15 @@ def sort_array_desc(int)
   int.sort.reverse
 end
 
+# def sort_array_char_count(array)
+#   array.sort do |a, b|
+#     a.scan(/[a-z A_Z]/).count <=> b.scan(/[a-z A_Z]/).count
+#   end
+# end
+
 def sort_array_char_count(array)
   array.sort do |a, b|
-    a.scan(/[a-z A_Z]/).count <=> b.scan(/[a-z A_Z]/).count
+    a.length <=> b.length
   end
 end
 
@@ -31,7 +37,7 @@ end
 
 def sum_array(array)
   sum = 0
-  array.each {|a| sum +=a}
+  array.each {|a| sum += a}
   sum
 end
 
